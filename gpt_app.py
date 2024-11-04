@@ -2,7 +2,6 @@ import streamlit as st
 import base64
 import requests
 import json
-
 # OpenAI API Keyの入力
 api_key = st.text_input("OpenAI API Keyを入力してください", type="password")
 
@@ -15,7 +14,7 @@ def encode_image(image):
 st.title("名刺解析アプリ")
 
 # 画像ファイルのアップロード
-uploaded_file = st.file_uploader("名刺画像をアップロードしてください", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("画像をアップロードしてください", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None and api_key:
     # 画像をエンコード
